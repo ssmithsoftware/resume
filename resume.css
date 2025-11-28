@@ -14,20 +14,43 @@ main {
 		'skills work' 1fr
 		'education work' 1fr
 		'projects work' 1fr / 1fr 2fr;
-	/* height: 100%; */
 	margin: auto;
 	max-width: 90vw;
 }
 
-section {
-	border-bottom-style: solid;
-	border-bottom-width: 0.1em;
-	padding: 0.5em;
+h1,
+h1 + p,
+h2 {
+	letter-spacing: 0.1em;
+}
+
+h1,
+h1 + p {
+	text-align: center;
+}
+
+h1 {
+	font-size: 5em;
+	margin-bottom: 0;
+}
+
+h1 + p {
+	font-size: 1.5em;
+}
+
+h2 {
+	font-weight: normal;
 }
 
 svg {
 	max-height: 1em;
 	max-width: 1em;
+}
+
+.section {
+	border-bottom-style: solid;
+	border-bottom-width: 0.1em;
+	padding: 0.5em;
 }
 
 .contact,
@@ -63,28 +86,4 @@ svg {
 
 .work {
 	grid-area: work;
-}
-
-h1,
-h1 + p,
-h2 {
-	letter-spacing: 0.1em;
-}
-
-h1,
-h1 + p {
-	text-align: center;
-}
-
-h1 {
-	font-size: 5em;
-	margin-bottom: 0;
-}
-
-h1 + p {
-	font-size: 1.5em;
-}
-
-h2 {
-	font-weight: normal;
 }
