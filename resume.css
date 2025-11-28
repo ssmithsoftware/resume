@@ -42,6 +42,10 @@ h2 {
 	font-weight: normal;
 }
 
+h4 {
+	margin: 0;
+}
+
 svg {
 	max-height: 1em;
 	max-width: 1em;
@@ -86,4 +90,13 @@ svg {
 
 .work {
 	grid-area: work;
+}
+
+.work-company {
+	display: flex;
+	justify-content: space-between;
+}
+
+.work-time {
+	font-size: small;
 }
