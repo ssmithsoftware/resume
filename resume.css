@@ -14,17 +14,17 @@ main {
 		'skills work' 1fr
 		'projects work' 1fr
 		'education work' 1fr / 1fr 2fr;
-	margin: auto;
-	max-width: 90vw;
+	margin: 4em auto;
+	max-width: 85vw;
 }
 
 h1 {
 	font-size: 5em;
-	margin-bottom: 0;
+	margin: 0;
 }
 
 h2 {
-	font-weight: normal;
+	font-weight: 500;
 }
 
 h4 {
@@ -48,9 +48,8 @@ h2 {
 
 address {
 	color: dodgerblue;
-	font-size: small;
 	font-style: normal;
-	font-weight: bold;
+	font-weight: 600;
 }
 
 a {
@@ -117,5 +116,5 @@ s-svg {
 }
 
 .time {
-	font-size: small;
+	font-size: 0.85em;
 }
