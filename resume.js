@@ -5,7 +5,7 @@ class SVGElement extends HTMLElement {
 		this.replaceChildren(
 			svgTemplate.content
 				.getElementById(this.dataset.children)
-				.cloneNode(true),
+				.cloneNode(true)
 		)
 	}
 }
