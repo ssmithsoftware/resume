@@ -109,12 +109,12 @@ s-svg {
 	grid-area: work;
 }
 
-.work-company {
+.article-section {
 	align-items: center;
 	display: flex;
 	justify-content: space-between;
 }
 
-.work-time {
+.time {
 	font-size: small;
 }
