@@ -12,8 +12,8 @@ main {
 		'heading heading' auto
 		'contact profile' 1fr
 		'skills work' 1fr
-		'education work' 1fr
-		'projects work' 1fr / 1fr 2fr;
+		'projects work' 1fr
+		'education work' 1fr / 1fr 2fr;
 	margin: auto;
 	max-width: 90vw;
 }
@@ -76,8 +76,8 @@ s-svg {
 
 .contact,
 .skills,
-.education,
-.projects {
+.projects,
+.education {
 	background-color: whitesmoke;
 }
 
@@ -97,12 +97,12 @@ s-svg {
 	grid-area: skills;
 }
 
-.education {
-	grid-area: education;
-}
-
 .projects {
 	grid-area: projects;
+}
+
+.education {
+	grid-area: education;
 }
 
 .work {
