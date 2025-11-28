@@ -1,0 +1,84 @@
+@import url('./Inter.css');
+
+body {
+	background-color: ghostwhite;
+	font-family: 'Inter', sans-serif;
+}
+
+main {
+	display: grid;
+	grid-template:
+		'heading heading' auto
+		'contact profile' 1fr
+		'skills work' 1fr
+		'education work' 1fr
+		'projects work' 1fr / 1fr 2fr;
+	height: 100%;
+	margin: auto;
+	max-width: 90vw;
+}
+
+section {
+	border-bottom-style: solid;
+	border-bottom-width: 0.1em;
+	padding: 0.5em;
+}
+
+.contact,
+.skills,
+.education,
+.projects {
+	background-color: gainsboro;
+}
+
+.heading {
+	grid-area: heading;
+}
+
+.contact {
+	grid-area: contact;
+}
+
+.profile {
+	grid-area: profile;
+}
+
+.skills {
+	grid-area: skills;
+}
+
+.education {
+	grid-area: education;
+}
+
+.projects {
+	grid-area: projects;
+}
+
+.work {
+	grid-area: work;
+}
+
+h1,
+h1 + p,
+h2 {
+	letter-spacing: 0.1em;
+}
+
+h1,
+h1 + p {
+	text-align: center;
+}
+
+h1 {
+	font-size: 5em;
+	margin-bottom: 0;
+}
+
+h1 + p {
+	font-size: 1.5em;
+}
+
+h2 {
+	font-weight: normal;
+}
