@@ -54,6 +54,10 @@ h2 {
 	font-weight: normal;
 }
 
+h4 {
+	margin: 0;
+}
+
 svg {
 	margin-right: 0.5em;
 	max-height: 2em;
@@ -67,7 +71,7 @@ s-svg {
 .section {
 	border-bottom-style: solid;
 	border-bottom-width: 0.1em;
-	padding: 0.5em;
+	padding: 1em;
 }
 
 .contact,
