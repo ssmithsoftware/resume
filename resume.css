@@ -30,24 +30,9 @@ a {
 	text-decoration: none;
 }
 
-h1,
-h1 + p,
-h2 {
-	letter-spacing: 0.1em;
-}
-
-h1,
-h1 + p {
-	text-align: center;
-}
-
 h1 {
 	font-size: 5em;
 	margin-bottom: 0;
-}
-
-h1 + p {
-	font-size: 1.5em;
 }
 
 h2 {
@@ -56,6 +41,21 @@ h2 {
 
 h4 {
 	margin: 0;
+}
+
+h1 + p {
+	font-size: 1.5em;
+}
+
+h1,
+h1 + p {
+	text-align: center;
+}
+
+h1,
+h1 + p,
+h2 {
+	letter-spacing: 0.1em;
 }
 
 svg {
@@ -78,7 +78,7 @@ s-svg {
 .skills,
 .education,
 .projects {
-	background-color: ghostwhite;
+	background-color: whitesmoke;
 }
 
 .heading {
