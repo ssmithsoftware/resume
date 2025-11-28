@@ -55,6 +55,7 @@ address {
 
 a {
 	color: inherit;
+	padding: 0.75em 0;
 	text-decoration: none;
 }
 
