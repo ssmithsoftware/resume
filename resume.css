@@ -1,7 +1,7 @@
 @import url('./Inter.css');
 
 body {
-	background-color: ghostwhite;
+	background-color: snow;
 	font-family: 'Inter', sans-serif;
 	margin: 0;
 }
@@ -16,6 +16,18 @@ main {
 		'projects work' 1fr / 1fr 2fr;
 	margin: auto;
 	max-width: 90vw;
+}
+
+address {
+	color: dodgerblue;
+	font-size: small;
+	font-style: normal;
+	font-weight: bold;
+}
+
+a {
+	color: inherit;
+	text-decoration: none;
 }
 
 h1,
@@ -42,13 +54,14 @@ h2 {
 	font-weight: normal;
 }
 
-h4 {
-	margin: 0;
+svg {
+	margin-right: 0.5em;
+	max-height: 2em;
+	max-width: 2em;
 }
 
-svg {
-	max-height: 1em;
-	max-width: 1em;
+s-svg {
+	vertical-align: middle;
 }
 
 .section {
@@ -61,7 +74,7 @@ svg {
 .skills,
 .education,
 .projects {
-	background-color: gainsboro;
+	background-color: ghostwhite;
 }
 
 .heading {
@@ -93,6 +106,7 @@ svg {
 }
 
 .work-company {
+	align-items: center;
 	display: flex;
 	justify-content: space-between;
 }
