@@ -2,17 +2,7 @@
 
 body {
 	background-color: snow;
-	display: grid;
 	font-family: 'Inter', sans-serif;
-	grid-template:
-		'header' auto
-		'main' 1fr
-		'footer' auto;
-	margin: 0;
-}
-
-header {
-	grid-area: header;
 }
 
 main {
@@ -27,10 +17,7 @@ main {
 		'projects work' 1fr
 		'education work' 1fr / 1fr 2fr;
 	margin: auto;
-}
-
-footer {
-	grid-area: footer;
+	max-width: 85vw;
 }
 
 h1 {
@@ -131,8 +118,4 @@ s-svg {
 	align-items: center;
 	display: flex;
 	justify-content: space-between;
-}
-
-.time {
-	font-size: 0.85em;
 }
