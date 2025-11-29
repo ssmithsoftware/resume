@@ -9,7 +9,7 @@ body {
 main {
 	display: grid;
 	grid-template:
-		'heading heading' auto
+		'header header' auto
 		'contact profile' 1fr
 		'skills work' 1fr
 		'projects work' 1fr
@@ -54,7 +54,7 @@ address {
 
 a {
 	color: inherit;
-	padding: 0.75em 0;
+	padding: 0.25em 0;
 	text-decoration: none;
 }
 
@@ -74,15 +74,8 @@ s-svg {
 	padding: 1em;
 }
 
-.contact,
-.skills,
-.projects,
-.education {
-	background-color: whitesmoke;
-}
-
-.heading {
-	grid-area: heading;
+.header {
+	grid-area: header;
 }
 
 .contact {
@@ -107,6 +100,13 @@ s-svg {
 
 .work {
 	grid-area: work;
+}
+
+.contact,
+.skills,
+.projects,
+.education {
+	background-color: whitesmoke;
 }
 
 .article-section {
