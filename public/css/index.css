@@ -121,6 +121,11 @@ s-svg {
 	background-color: whitesmoke;
 }
 
+.skills-ul {
+	font-weight: 600;
+	list-style: none;
+}
+
 .article-section {
 	align-items: center;
 	display: flex;
