@@ -7,9 +7,6 @@ body {
 }
 
 main {
-	--main-border-style: solid;
-	--main-border-width: 0.1em;
-
 	display: grid;
 	grid-area: main;
 	grid-template:
@@ -72,9 +69,9 @@ s-svg {
 	vertical-align: middle;
 }
 
-.main-section {
-	border-bottom-style: var(--main-border-style);
-	border-bottom-width: var(--main-border-width);
+.section {
+	border-bottom-style: solid;
+	border-bottom-width: 0.1em;
 	padding: 1em;
 }
 
@@ -100,12 +97,6 @@ s-svg {
 
 .work {
 	grid-area: work;
-}
-
-.contact,
-.profile {
-	border-top-style: var(--main-border-style);
-	border-top-width: var(--main-border-width);
 }
 
 .contact,
