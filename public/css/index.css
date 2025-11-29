@@ -5,7 +5,8 @@ body {
 	--border-width: 0.1em;
 	--padding: 1em;
 
-	background-color: snow;
+	background-color: black; /* snow */
+	color: rgba(255, 255, 255, 0.75); /* black */
 	font-family: 'Inter', sans-serif;
 	margin: 0;
 }
@@ -118,7 +119,7 @@ s-svg {
 .skills,
 .projects,
 .education {
-	background-color: whitesmoke;
+	background-color: darkslateblue; /* whitesmoke */
 }
 
 .skills-ul {
