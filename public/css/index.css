@@ -1,9 +1,18 @@
 @import url('./Inter.css');
 
 body {
+	--border-style: solid;
+	--border-width: 0.1em;
+	--padding: 1em;
+
 	background-color: snow;
 	font-family: 'Inter', sans-serif;
 	margin: 0;
+}
+
+header,
+footer {
+	padding: var(--padding);
 }
 
 main {
@@ -70,9 +79,9 @@ s-svg {
 }
 
 .section {
-	border-bottom-style: solid;
-	border-bottom-width: 0.1em;
-	padding: 1em;
+	border-bottom-style: var(--border-style);
+	border-bottom-width: var(--border-width);
+	padding: var(--padding);
 }
 
 .contact {
@@ -97,6 +106,12 @@ s-svg {
 
 .work {
 	grid-area: work;
+}
+
+.contact,
+.profile {
+	border-top-style: var(--border-style);
+	border-top-width: var(--border-width);
 }
 
 .contact,
