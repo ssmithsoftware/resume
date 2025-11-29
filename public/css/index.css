@@ -2,25 +2,40 @@
 
 body {
 	background-color: snow;
+	display: grid;
 	font-family: 'Inter', sans-serif;
+	grid-template:
+		'header' auto
+		'main' 1fr
+		'footer' auto;
 	margin: 0;
 }
 
+header {
+	grid-area: header;
+}
+
 main {
+	--main-border-style: solid;
+	--main-border-width: 0.1em;
+
 	display: grid;
+	grid-area: main;
 	grid-template:
-		'header header' auto
 		'contact profile' 1fr
 		'skills work' 1fr
 		'projects work' 1fr
 		'education work' 1fr / 1fr 2fr;
-	margin: 4em auto;
-	max-width: 85vw;
+	margin: auto;
+}
+
+footer {
+	grid-area: footer;
 }
 
 h1 {
 	font-size: 5em;
-	margin: 0;
+	margin-bottom: 0;
 }
 
 h2 {
@@ -36,7 +51,8 @@ h1 + p {
 }
 
 h1,
-h1 + p {
+h1 + p,
+footer {
 	text-align: center;
 }
 
@@ -68,14 +84,10 @@ s-svg {
 	vertical-align: middle;
 }
 
-.section {
-	border-bottom-style: solid;
-	border-bottom-width: 0.1em;
+.main-section {
+	border-bottom-style: var(--main-border-style);
+	border-bottom-width: var(--main-border-width);
 	padding: 1em;
-}
-
-.header {
-	grid-area: header;
 }
 
 .contact {
@@ -100,6 +112,12 @@ s-svg {
 
 .work {
 	grid-area: work;
+}
+
+.contact,
+.profile {
+	border-top-style: var(--main-border-style);
+	border-top-width: var(--main-border-width);
 }
 
 .contact,
