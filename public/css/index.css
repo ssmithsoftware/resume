@@ -34,14 +34,6 @@ h1 {
 	margin-bottom: 0;
 }
 
-h2 {
-	font-weight: 500;
-}
-
-h4 {
-	margin: 0;
-}
-
 h1 + p {
 	font-size: 1.5em;
 }
@@ -56,6 +48,17 @@ h1,
 h1 + p,
 h2 {
 	letter-spacing: 0.1em;
+}
+
+h5,
+h6 {
+	font-size: 1em;
+}
+
+h4,
+h5,
+h6 {
+	margin: 0;
 }
 
 address {
@@ -79,6 +82,10 @@ svg {
 
 s-svg {
 	vertical-align: middle;
+}
+
+ul {
+	margin: 1em 0;
 }
 
 .section {
@@ -123,6 +130,10 @@ s-svg {
 .education {
 	background-color: darkslateblue;
 	/* background-color: whitesmoke; */
+}
+
+.heading {
+	font-weight: 500;
 }
 
 .skills-ul {
