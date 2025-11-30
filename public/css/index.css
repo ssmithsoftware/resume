@@ -5,8 +5,9 @@ body {
 	--border-width: 0.1em;
 	--padding: 1em;
 
-	background-color: black; /* snow */
-	color: rgba(255, 255, 255, 0.75); /* black */
+	/* background-color: black; */
+	background-color: snow;
+	/* color: rgba(255, 255, 255, 0.75); */
 	font-family: 'Inter', sans-serif;
 	margin: 0;
 }
@@ -58,7 +59,8 @@ h2 {
 }
 
 address {
-	color: deepskyblue; /* dodgerblue */
+	/* color: deepskyblue; */
+	color: dodgerblue;
 	font-style: normal;
 	font-weight: 600;
 }
@@ -119,7 +121,8 @@ s-svg {
 .skills,
 .projects,
 .education {
-	background-color: darkslateblue; /* whitesmoke */
+	/* background-color: darkslateblue; */
+	background-color: whitesmoke;
 }
 
 .skills-ul {
