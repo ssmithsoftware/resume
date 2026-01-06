@@ -22,9 +22,9 @@ main {
 	grid-area: main;
 	grid-template:
 		'contact profile' 1fr
-		'skills work' 1fr
-		'projects work' 1fr
-		'education work' 1fr / 1fr 2fr;
+		'skills work' 2fr
+		'projects work' 2fr
+		'education work' 2fr / 1fr 2fr;
 	margin: auto;
 	max-width: 85vw;
 }
