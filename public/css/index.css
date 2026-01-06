@@ -61,17 +61,17 @@ h6 {
 	font-size: 1em;
 }
 
-address {
+a {
 	color: deepskyblue;
 	/* color: dodgerblue; */
 	font-style: normal;
 	font-weight: 600;
-}
-
-a {
-	color: inherit;
 	padding: 0.25em 0;
 	text-decoration: none;
+}
+
+a:hover {
+	text-decoration: underline;
 }
 
 svg {
