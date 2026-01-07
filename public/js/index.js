@@ -44,14 +44,14 @@ customElements.define('s-svg', SVGElement)
 
 // Add listener to copy password text to clipboard
 function addCopyListener() {
+	const passwordText = document.querySelector('[data-password]').textContent
+	const copyBtn = document.querySelector('[data-copy]')
+
 	async function copyText(event) {
 		event.currentTarget.blur()
 
 		await navigator.clipboard.writeText(passwordText)
 	}
-
-	const passwordText = document.querySelector('[data-password]').textContent
-	const copyBtn = document.querySelector('[data-copy]')
 
 	copyBtn.addEventListener('click', copyText)
 }
