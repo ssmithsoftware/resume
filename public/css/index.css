@@ -1,6 +1,7 @@
 @import url('./Inter.css');
 
 body {
+	--border-radius: 0.5em;
 	--border-style: solid;
 	--border-width: 0.1em;
 	--padding: 1em;
@@ -85,11 +86,16 @@ s-svg {
 }
 
 ul {
-	margin: 1em 0;
+	margin: var(--padding) 0;
 }
 
 aside {
-	margin: 0 1em;
+	border-color: darkslateblue;
+	border-radius: var(--border-radius);
+	border-style: var(--border-style);
+	border-width: var(--border-width);
+	margin: 0 var(--padding);
+	padding: 0 var(--padding);
 }
 
 button {
@@ -101,7 +107,7 @@ button {
 
 button::after {
 	background-color: darkslateblue;
-	border-radius: 0.5em;
+	border-radius: var(--border-radius);
 	content: 'Copy to Clipboard';
 	opacity: 0;
 	padding: 0.5em;
