@@ -74,9 +74,10 @@ a:hover {
 }
 
 svg {
+	height: 2em;
 	margin-right: 0.5em;
-	max-height: 2em;
-	max-width: 2em;
+	max-width: 100%;
+	width: 2em;
 }
 
 s-svg {
@@ -89,6 +90,46 @@ ul {
 
 aside {
 	margin: 0 1em;
+}
+
+button {
+	background-color: transparent;
+	border: 0;
+	color: inherit;
+	cursor: pointer;
+}
+
+button::after {
+	background-color: darkslateblue;
+	border-radius: 0.5em;
+	content: 'Copy to Clipboard';
+	opacity: 0;
+	padding: 0.5em;
+	transition-property: opacity;
+}
+
+button svg {
+	transition-property: filter;
+}
+
+button::after,
+button svg {
+	transition-duration: 150ms;
+	transition-timing-function: ease-in-out;
+}
+
+button:active {
+	transform: translate(0.25em, 0.25em);
+}
+
+button:focus::after,
+button:hover::after {
+	opacity: 1;
+}
+
+button:focus svg,
+button:hover svg {
+	filter: brightness(50%);
 }
 
 .section {
