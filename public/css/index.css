@@ -6,8 +6,8 @@ body {
 	--blue: oklch(0.75 0.15 230);
 	--border-radius: 0.5em;
 	--cover-url: url('https://static.ssmithsoftware.com/images/jpg/cover.jpg');
-	--padding: 1em;
 	--purple: oklch(0.3 0.12 286);
+	--spacing: 1em;
 	--transparent: oklch(0 0 0 / 0%);
 	--white: oklch(1 0 0 / 75%);
 
@@ -27,11 +27,9 @@ header::before {
 		linear-gradient(
 			to right,
 			var(--black),
-			var(--purple),
 			30%,
 			var(--transparent),
 			70%,
-			var(--purple),
 			var(--black)
 		),
 		var(--cover-url);
@@ -46,7 +44,7 @@ header::before {
 
 header,
 footer {
-	padding: var(--padding) 0;
+	padding: var(--spacing) 0;
 }
 
 main {
@@ -98,7 +96,7 @@ a:hover {
 
 svg {
 	height: 2em;
-	margin-right: 0.5em;
+	margin-right: calc(var(--spacing) / 2);
 	max-width: 100%;
 	width: 2em;
 }
@@ -108,14 +106,18 @@ s-svg {
 }
 
 ul {
-	margin: var(--padding) 0;
+	margin: var(--spacing) 0;
+}
+
+dd {
+	margin: 0 calc(var(--spacing) / 2);
 }
 
 aside {
 	border: 0.1em solid var(--purple);
 	border-radius: var(--border-radius);
-	margin: 0 var(--padding);
-	padding: 0 var(--padding);
+	margin: 0 var(--spacing);
+	padding: 0 var(--spacing);
 }
 
 button {
@@ -130,7 +132,7 @@ button::after {
 	border-radius: var(--border-radius);
 	content: 'Copy to Clipboard';
 	opacity: 0;
-	padding: 0.5em;
+	padding: calc(var(--spacing) / 2);
 	transition-property: opacity;
 }
 
@@ -166,7 +168,7 @@ button:hover svg {
 			var(--black)
 		)
 		1 / 0.05em;
-	padding: var(--padding);
+	padding: var(--spacing) calc(var(--spacing) * 2);
 }
 
 .contact {
@@ -214,6 +216,7 @@ button:hover svg {
 .skills-ul {
 	font-weight: 600;
 	list-style: none;
+	padding: 0;
 }
 
 .article-section {
