@@ -44,7 +44,7 @@ header::before {
 
 header,
 footer {
-	padding: var(--spacing) 0;
+	padding: var(--spacing);
 }
 
 main {
