@@ -1,21 +1,52 @@
 @import url('./Inter.css');
 
 body {
+	--avatar-url: url('https://static.ssmithsoftware.com/images/jpg/avatar.jpg');
+	--black: oklch(0 0 0);
+	--blue: oklch(0.75 0.15 230);
 	--border-radius: 0.5em;
-	--border-style: solid;
-	--border-width: 0.1em;
+	--cover-url: url('https://static.ssmithsoftware.com/images/jpg/cover.jpg');
 	--padding: 1em;
+	--purple: oklch(0.3 0.12 286);
+	--transparent: oklch(0 0 0 / 0%);
+	--white: oklch(1 0 0 / 75%);
 
-	background-color: black;
-	/* background-color: snow; */
-	color: rgba(255, 255, 255, 0.75);
+	background-color: var(--black);
+	color: var(--white);
 	font-family: 'Inter', sans-serif;
-	margin: 0;
+	margin: auto;
+	max-width: 85vw;
+}
+
+header {
+	position: relative;
+}
+
+header::before {
+	background-image:
+		linear-gradient(
+			to right,
+			var(--black),
+			var(--purple),
+			30%,
+			var(--transparent),
+			70%,
+			var(--purple),
+			var(--black)
+		),
+		var(--cover-url);
+	background-position: center;
+	background-size: cover;
+	content: '';
+	inset: 0;
+	opacity: 0.25;
+	position: absolute;
+	z-index: -1;
 }
 
 header,
 footer {
-	padding: var(--padding);
+	padding: var(--padding) 0;
 }
 
 main {
@@ -26,8 +57,6 @@ main {
 		'skills work' 3fr
 		'open-source work' 6fr
 		'education work' 3fr / 1fr 2fr;
-	margin: auto;
-	max-width: 85vw;
 }
 
 h1 {
@@ -37,12 +66,6 @@ h1 {
 
 h1 + p {
 	font-size: 1.5em;
-}
-
-h1,
-h1 + p,
-footer {
-	text-align: center;
 }
 
 h1,
@@ -63,8 +86,7 @@ h6 {
 }
 
 a {
-	color: deepskyblue;
-	/* color: dodgerblue; */
+	color: var(--blue);
 	font-style: normal;
 	font-weight: 600;
 	text-decoration: none;
@@ -90,23 +112,21 @@ ul {
 }
 
 aside {
-	border-color: darkslateblue;
+	border: 0.1em solid var(--purple);
 	border-radius: var(--border-radius);
-	border-style: var(--border-style);
-	border-width: var(--border-width);
 	margin: 0 var(--padding);
 	padding: 0 var(--padding);
 }
 
 button {
-	background-color: transparent;
+	background-color: var(--transparent);
 	border: 0;
 	color: inherit;
 	cursor: pointer;
 }
 
 button::after {
-	background-color: darkslateblue;
+	background-color: var(--purple);
 	border-radius: var(--border-radius);
 	content: 'Copy to Clipboard';
 	opacity: 0;
@@ -139,8 +159,13 @@ button:hover svg {
 }
 
 .section {
-	border-bottom-style: var(--border-style);
-	border-bottom-width: var(--border-width);
+	border-image: linear-gradient(
+			to right,
+			var(--black),
+			var(--white),
+			var(--black)
+		)
+		1 / 0.05em;
 	padding: var(--padding);
 }
 
@@ -169,17 +194,17 @@ button:hover svg {
 }
 
 .contact,
-.profile {
-	border-top-style: var(--border-style);
-	border-top-width: var(--border-width);
-}
-
-.contact,
 .skills,
 .open-source,
 .education {
-	background-color: darkslateblue;
-	/* background-color: whitesmoke; */
+	background-image: linear-gradient(
+		to right,
+		var(--black),
+		20%,
+		var(--purple),
+		80%,
+		var(--black)
+	);
 }
 
 .heading {
