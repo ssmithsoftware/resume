@@ -1,6 +1,6 @@
-// Update current company date
+// Update current company dates
 function updateCurrentTime() {
-	const currentTime = document.querySelector('[data-current]')
+	const currentTimes = document.querySelectorAll('[data-current]')
 	const months = [
 		'January',
 		'February',
@@ -21,8 +21,10 @@ function updateCurrentTime() {
 	const month = now.getMonth()
 	const monthName = months[month]
 
-	currentTime.dateTime = `${year}-${String(month + 1).padStart(2, '0')}`
-	currentTime.textContent = `${monthName} ${year}`
+	for (const time of currentTimes) {
+		time.dateTime = `${year}-${String(month + 1).padStart(2, '0')}`
+		time.textContent = `${monthName} ${year}`
+	}
 }
 
 document.addEventListener('DOMContentLoaded', updateCurrentTime)

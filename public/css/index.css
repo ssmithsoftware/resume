@@ -222,15 +222,3 @@ button:hover svg {
 		var(--black)
 	);
 }
-
-.skills-ul {
-	font-weight: bold;
-	list-style: none;
-	padding: 0;
-}
-
-.article-section {
-	align-items: center;
-	display: flex;
-	justify-content: space-between;
-}
