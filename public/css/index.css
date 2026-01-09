@@ -5,6 +5,7 @@ body {
 	--black: oklch(0 0 0);
 	--blue: oklch(0.75 0.15 230);
 	--border-radius: 0.5em;
+	--border-width: 0.1em;
 	--cover-url: url('https://static.ssmithsoftware.com/images/jpg/cover.jpg');
 	--purple: oklch(0.3 0.12 286);
 	--spacing: 1em;
@@ -114,7 +115,7 @@ dd {
 }
 
 aside {
-	border: 0.1em solid var(--purple);
+	border: var(--border-width) solid var(--purple);
 	border-radius: var(--border-radius);
 	margin: 0 var(--spacing);
 	padding: 0 var(--spacing);
@@ -167,7 +168,7 @@ button:hover svg {
 			var(--white),
 			var(--black)
 		)
-		1 / 0.05em;
+		1 / 0 0 var(--border-width);
 	padding: var(--spacing) calc(var(--spacing) * 2);
 }
 
@@ -193,6 +194,11 @@ button:hover svg {
 
 .work {
 	grid-area: work;
+}
+
+.contact,
+.profile {
+	border-image-width: var(--border-width) 0;
 }
 
 .contact,
