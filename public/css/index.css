@@ -7,44 +7,38 @@ body {
 	--border-radius: 0.5em;
 	--border-width: 0.1em;
 	--cover-url: url('https://static.ssmithsoftware.com/images/jpg/cover.jpg');
-	--purple: oklch(0.3 0.12 286);
+	--gray: oklch(0.8 0 0);
+	--purple: oklch(0.3 0.15 286);
 	--spacing: 1em;
 	--transparent: oklch(0 0 0 / 0%);
-	--white: oklch(1 0 0 / 75%);
 
 	background-color: var(--black);
-	color: var(--white);
+	color: var(--gray);
 	font-family: 'Inter', sans-serif;
 	margin: auto;
 	max-width: 85vw;
 }
 
 header {
-	position: relative;
-}
-
-header::before {
+	background-blend-mode: hard-light;
+	background-color: var(--black);
 	background-image:
 		linear-gradient(
 			to right,
 			var(--black),
-			30%,
+			46%,
 			var(--transparent),
-			70%,
+			50%,
 			var(--black)
 		),
 		var(--cover-url);
 	background-position: center;
 	background-size: cover;
-	content: '';
-	inset: 0;
-	opacity: 0.25;
-	position: absolute;
-	z-index: -1;
 }
 
 header,
 footer {
+	min-height: 30vh;
 	padding: var(--spacing);
 }
 
@@ -173,7 +167,7 @@ button:hover svg {
 	border-image: linear-gradient(
 			to right,
 			var(--black),
-			var(--white),
+			var(--gray),
 			var(--black)
 		)
 		1 / 0 0 var(--border-width);
