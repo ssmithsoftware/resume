@@ -16,7 +16,7 @@ body {
 	color: var(--gray);
 	font-family: 'Inter', sans-serif;
 	margin: auto;
-	max-width: 85vw;
+	max-width: 86vw;
 }
 
 header {
@@ -38,7 +38,7 @@ header {
 
 header,
 footer {
-	min-height: 30vh;
+	min-height: 24vh;
 	padding: var(--spacing);
 }
 
