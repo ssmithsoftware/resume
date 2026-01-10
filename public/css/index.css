@@ -21,7 +21,7 @@ body {
 
 header {
 	background-blend-mode: hard-light;
-	background-color: var(--black);
+	background-color: inherit;
 	background-image:
 		linear-gradient(
 			to right,
