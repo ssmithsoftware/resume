@@ -98,7 +98,6 @@ a:hover {
 
 svg {
 	height: 1.5em;
-	margin-right: calc(var(--spacing) / 2);
 	max-width: 100%;
 	width: 1.5em;
 }
@@ -132,23 +131,32 @@ button {
 	color: inherit;
 	cursor: pointer;
 	font-size: inherit;
+	padding: 0 calc(var(--spacing) / 4);
+}
+
+button s-svg {
+	pointer-events: none;
+	position: relative;
+}
+
+button s-svg::after {
+	background-color: var(--purple);
+	border-radius: var(--border-radius);
+	content: 'Copy to Clipboard';
+	opacity: 0;
+	padding: calc(var(--spacing) / 2);
+	position: absolute;
+	top: 100%;
+	transition-property: opacity;
+	width: max-content;
 }
 
 button svg {
 	transition-property: filter;
 }
 
-button::after {
-	background-color: var(--purple);
-	border-radius: var(--border-radius);
-	content: 'Copy to Clipboard';
-	opacity: 0;
-	padding: calc(var(--spacing) / 2);
-	transition-property: opacity;
-}
-
-button svg,
-button::after {
+button s-svg::after,
+button svg {
 	transition-duration: 150ms;
 	transition-timing-function: ease-in-out;
 }
@@ -157,14 +165,14 @@ button:active {
 	transform: translate(0.25em, 0.25em);
 }
 
+button:focus s-svg::after,
+button:hover s-svg::after {
+	opacity: 1;
+}
+
 button:focus svg,
 button:hover svg {
 	filter: brightness(50%);
-}
-
-button:focus::after,
-button:hover::after {
-	opacity: 1;
 }
 
 .section {
