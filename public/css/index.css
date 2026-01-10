@@ -135,8 +135,11 @@ button {
 }
 
 button s-svg {
-	pointer-events: none;
 	position: relative;
+}
+
+button svg {
+	transition-property: filter;
 }
 
 button s-svg::after {
@@ -145,18 +148,15 @@ button s-svg::after {
 	content: 'Copy to Clipboard';
 	opacity: 0;
 	padding: calc(var(--spacing) / 2);
+	pointer-events: none;
 	position: absolute;
 	top: 100%;
 	transition-property: opacity;
 	width: max-content;
 }
 
-button svg {
-	transition-property: filter;
-}
-
-button s-svg::after,
-button svg {
+button svg,
+button s-svg::after {
 	transition-duration: 150ms;
 	transition-timing-function: ease-in-out;
 }
@@ -165,14 +165,14 @@ button:active {
 	transform: translate(0.25em, 0.25em);
 }
 
-button:focus s-svg::after,
-button:hover s-svg::after {
-	opacity: 1;
-}
-
 button:focus svg,
 button:hover svg {
 	filter: brightness(50%);
+}
+
+button:focus s-svg::after,
+button:hover s-svg::after {
+	opacity: 1;
 }
 
 .section {
