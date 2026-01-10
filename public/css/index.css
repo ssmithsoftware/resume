@@ -16,8 +16,7 @@ body {
 	background-color: var(--black);
 	color: var(--white);
 	font-family: 'Inter', sans-serif;
-	margin: auto;
-	max-width: 86vw;
+	margin: 0;
 }
 
 header {
@@ -236,9 +235,9 @@ button:hover s-svg::after {
 }
 
 @media (width >= 62rem) {
-	header {
-		/* Removes image artifacts at right edge on certain viewports */
-		background-position: left;
+	body {
+		margin: auto;
+		max-width: 86vw;
 	}
 
 	main {
