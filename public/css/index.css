@@ -107,6 +107,7 @@ s-svg {
 
 ul {
 	margin: var(--spacing) 0;
+	padding-left: var(--spacing);
 }
 
 dt {
@@ -144,7 +145,7 @@ button svg {
 button s-svg::after {
 	background-color: var(--purple);
 	border-radius: var(--border-radius);
-	content: 'Copy to Clipboard';
+	content: 'Copy';
 	opacity: 0;
 	padding: calc(var(--spacing) / 2);
 	pointer-events: none;
@@ -250,5 +251,9 @@ button:hover s-svg::after {
 
 	h1 {
 		font-size: 4em;
+	}
+
+	ul {
+		padding-left: calc(var(--spacing) * 2);
 	}
 }
