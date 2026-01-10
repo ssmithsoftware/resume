@@ -146,11 +146,13 @@ button s-svg::after {
 	background-color: var(--purple);
 	border-radius: var(--border-radius);
 	content: 'Copy';
+	left: 150%;
 	opacity: 0;
 	padding: calc(var(--spacing) / 2);
 	pointer-events: none;
 	position: absolute;
-	top: 100%;
+	top: 25%;
+	transform: translateY(-50%);
 	transition-property: opacity;
 	width: max-content;
 }
