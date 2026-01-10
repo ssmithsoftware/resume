@@ -134,6 +134,10 @@ button {
 	font-size: inherit;
 }
 
+button svg {
+	transition-property: filter;
+}
+
 button::after {
 	background-color: var(--purple);
 	border-radius: var(--border-radius);
@@ -143,12 +147,8 @@ button::after {
 	transition-property: opacity;
 }
 
-button svg {
-	transition-property: filter;
-}
-
-button::after,
-button svg {
+button svg,
+button::after {
 	transition-duration: 150ms;
 	transition-timing-function: ease-in-out;
 }
@@ -157,14 +157,14 @@ button:active {
 	transform: translate(0.25em, 0.25em);
 }
 
-button:focus::after,
-button:hover::after {
-	opacity: 1;
-}
-
 button:focus svg,
 button:hover svg {
 	filter: brightness(50%);
+}
+
+button:focus::after,
+button:hover::after {
+	opacity: 1;
 }
 
 .section {
