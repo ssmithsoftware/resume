@@ -56,7 +56,7 @@ main {
 }
 
 h1 {
-	font-size: 4em;
+	font-size: 3em;
 	margin-bottom: 0;
 }
 
@@ -247,5 +247,9 @@ button:hover s-svg::after {
 			'skills work' 3fr
 			'open-source work' 6fr
 			'education work' 3fr / 1fr 2fr;
+	}
+
+	h1 {
+		font-size: 4em;
 	}
 }
