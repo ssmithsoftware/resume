@@ -236,6 +236,11 @@ button:hover s-svg::after {
 }
 
 @media (width >= 62rem) {
+	header {
+		/* Removes image artifacts at right edge on certain viewports */
+		background-position: left;
+	}
+
 	main {
 		grid-template:
 			'contact profile' 2fr
