@@ -1,19 +1,20 @@
 @import url('./Inter.css');
 
-body {
-	--avatar-url: url('https://static.ssmithsoftware.com/images/jpg/avatar.jpg');
+html {
 	--black: oklch(0 0 0);
 	--blue: oklch(0.75 0.15 230);
 	--border-radius: 0.5em;
 	--border-width: 0.1em;
-	--cover-url: url('https://static.ssmithsoftware.com/images/jpg/cover.jpg');
-	--gray: oklch(0.8 0 0);
+	--header-url: url('https://static.ssmithsoftware.com/images/jpg/header.jpg');
 	--purple: oklch(0.3 0.15 286);
 	--spacing: 1em;
 	--transparent: oklch(0 0 0 / 0%);
+	--white: oklch(0.8 0 0);
+}
 
+body {
 	background-color: var(--black);
-	color: var(--gray);
+	color: var(--white);
 	font-family: 'Inter', sans-serif;
 	margin: auto;
 	max-width: 86vw;
@@ -31,7 +32,7 @@ header {
 			50%,
 			var(--black)
 		),
-		var(--cover-url);
+		var(--header-url);
 	background-position: center;
 	background-size: cover;
 }
@@ -168,7 +169,7 @@ button:hover svg {
 	border-image: linear-gradient(
 			to right,
 			var(--black),
-			var(--gray),
+			var(--white),
 			var(--black)
 		)
 		1 / 0 0 var(--border-width);
