@@ -216,4 +216,10 @@ button:hover svg {
 		80%,
 		var(--black)
 	);
+	padding: var(--spacing) calc(var(--spacing) * 3);
+}
+
+.skills ul {
+	list-style-type: none;
+	padding: 0;
 }
