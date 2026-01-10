@@ -47,10 +47,12 @@ main {
 	display: grid;
 	grid-area: main;
 	grid-template:
-		'contact profile' 2fr
-		'skills work' 3fr
-		'open-source work' 6fr
-		'education work' 3fr / 1fr 2fr;
+		'contact'
+		'profile'
+		'skills'
+		'work'
+		'open-source'
+		'education';
 }
 
 h1 {
@@ -223,4 +225,14 @@ button:hover svg {
 .skills ul {
 	list-style-type: none;
 	padding: 0;
+}
+
+@media (width >= 62rem) {
+	main {
+		grid-template:
+			'contact profile' 2fr
+			'skills work' 3fr
+			'open-source work' 6fr
+			'education work' 3fr / 1fr 2fr;
+	}
 }
