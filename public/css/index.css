@@ -131,7 +131,6 @@ button {
 	color: inherit;
 	cursor: pointer;
 	font-size: inherit;
-	padding: 0 calc(var(--spacing) / 4);
 }
 
 button s-svg {
