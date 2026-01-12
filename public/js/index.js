@@ -50,9 +50,10 @@ function addCopyListener() {
 	const copyBtn = document.querySelector('[data-copy]')
 
 	async function copyText(event) {
-		event.currentTarget.blur()
+		const { currentTarget } = event
 
 		await navigator.clipboard.writeText(passwordText)
+		currentTarget.blur()
 	}
 
 	copyBtn.addEventListener('click', copyText)
