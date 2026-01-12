@@ -1,3 +1,4 @@
-# Scott Smith Resume
+# Resume
 
-Last Updated December 2025
+[Scott Smith - Software
+Engineer](https://static.ssmithsoftware.com/resume/public/index.html)
