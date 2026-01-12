@@ -8,6 +8,8 @@ html {
 	--cover-url: url('https://static.ssmithsoftware.com/images/jpg/cover.jpg');
 	--purple: oklch(0.3 0.15 286);
 	--spacing: 1em;
+	--transition-duration: 150ms;
+	--transition-timing-function: ease-in-out;
 	--transparent: oklch(0 0 0 / 0%);
 	--white: oklch(0.8 0 0);
 }
@@ -20,8 +22,12 @@ body {
 }
 
 header {
+	position: relative;
+}
+
+header::before {
 	background-blend-mode: hard-light;
-	background-color: inherit;
+	background-color: var(--black);
 	background-image:
 		linear-gradient(
 			to right,
@@ -34,6 +40,14 @@ header {
 		var(--cover-url);
 	background-position: center;
 	background-size: cover;
+	content: '';
+	inset: 0;
+	opacity: 0.25;
+	position: absolute;
+	transition-duration: var(--transition-duration);
+	transition-property: opacity;
+	transition-timing-function: var(--transition-timing-function);
+	z-index: -1;
 }
 
 header,
@@ -158,8 +172,8 @@ button s-svg::after {
 
 button svg,
 button s-svg::after {
-	transition-duration: 150ms;
-	transition-timing-function: ease-in-out;
+	transition-duration: var(--transition-duration);
+	transition-timing-function: var(--transition-timing-function);
 }
 
 button:active {
@@ -234,6 +248,12 @@ button:hover s-svg::after {
 .skills ul {
 	list-style-type: none;
 	padding: 0;
+}
+
+@media (width >= 48rem) {
+	header::before {
+		opacity: 1;
+	}
 }
 
 @media (width >= 62rem) {
