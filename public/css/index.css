@@ -11,7 +11,7 @@ html {
 	--transition-duration: 150ms;
 	--transition-timing-function: ease-in-out;
 	--transparent: oklch(0 0 0 / 0%);
-	--white: oklch(0.8 0 0);
+	--white: oklch(1 0 0);
 }
 
 body {
