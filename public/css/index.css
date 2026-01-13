@@ -78,6 +78,17 @@ h1 + p {
 	font-size: 1.5em;
 }
 
+section {
+	border-image: linear-gradient(
+			to right,
+			var(--black),
+			var(--white),
+			var(--black)
+		)
+		1 / 0 0 var(--border-width);
+	padding: var(--spacing) calc(var(--spacing) * 2);
+}
+
 h2 {
 	font-weight: 500;
 }
@@ -189,17 +200,6 @@ button:hover svg {
 button:focus s-svg::after,
 button:hover s-svg::after {
 	opacity: 1;
-}
-
-.section {
-	border-image: linear-gradient(
-			to right,
-			var(--black),
-			var(--white),
-			var(--black)
-		)
-		1 / 0 0 var(--border-width);
-	padding: var(--spacing) calc(var(--spacing) * 2);
 }
 
 .contact {
