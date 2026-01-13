@@ -57,18 +57,6 @@ footer {
 	padding: var(--spacing);
 }
 
-main {
-	display: grid;
-	grid-area: main;
-	grid-template:
-		'contact'
-		'profile'
-		'skills'
-		'work'
-		'open-source'
-		'education';
-}
-
 h1 {
 	font-size: 3em;
 	margin-bottom: 0;
@@ -260,6 +248,7 @@ button:hover s-svg::after {
 	}
 
 	main {
+		display: grid;
 		grid-template:
 			'contact profile' 2fr
 			'skills work' 3fr
