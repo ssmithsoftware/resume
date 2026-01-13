@@ -4,6 +4,7 @@ html {
 	--black: oklch(0 0 0);
 	--blue: oklch(0.75 0.15 230);
 	--border-radius: 0.5em;
+	--border-style: solid;
 	--border-width: 0.1em;
 	--cover-url: url('https://static.ssmithsoftware.com/images/jpg/cover.jpg');
 	--purple: oklch(0.3 0.15 286);
@@ -133,7 +134,7 @@ dd {
 }
 
 aside {
-	border: var(--border-width) solid var(--purple);
+	border: var(--border-width) var(--border-style) var(--purple);
 	border-radius: var(--border-radius);
 	margin: 0 var(--spacing);
 	padding: 0 var(--spacing);
@@ -276,5 +277,36 @@ button:hover s-svg::after {
 
 	.profile {
 		border-image-width: var(--border-width) 0;
+	}
+}
+
+@media print {
+	body {
+		background-color: var(--white);
+		color: var(--black);
+	}
+
+	header::before {
+		display: none;
+	}
+
+	header,
+	footer {
+		min-height: auto;
+	}
+
+	a {
+		color: var(--black);
+	}
+
+	aside {
+		display: none;
+	}
+
+	.contact,
+	.skills,
+	.open-source,
+	.education {
+		background-image: none;
 	}
 }
